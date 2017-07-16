@@ -7,7 +7,10 @@ import java.util.Scanner;
  */
 public class Question1 {
 
+    void insertionSort(int arr[]){
 
+
+    }
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
@@ -28,36 +31,36 @@ public class Question1 {
             indexArray[i] = scanner.nextInt();
         }
 
-        for(int i=0; i<size; i++){
 
-            int pos = indexArray[i];
-            System.out.println("Position is: " + pos);
 
-            if(pos == i){
 
-                continue;
-            }else{
-               //swap(valueArray, i, pos);
-                System.out.println("Swapping " + i + " with " + pos);
+            for(int i=1; i<size; i++){
 
-                int temp = valueArray[pos];
-                valueArray[pos] = valueArray[i];
-                valueArray[i] = temp;
-
-                int temp2 = indexArray[pos];
-                indexArray[pos] = indexArray[i];
-                indexArray[i] = temp2;
+                int indexKey = indexArray[i];
+                int valueKey = valueArray[i];
+                int j = i-1;
+                while(j>=0 && indexArray[j]>indexKey){
+                    indexArray[j+1] = indexArray[j];
+                    valueArray[j+1] = valueArray[j];
+                    j--;
+                }
+                indexArray[j+1] = indexKey;
+                valueArray[j+1] = valueKey;
             }
-            for(int counter=0; counter<size; counter++){
 
-                System.out.print(valueArray[counter] + " ");
-            }
-            System.out.println();
-        }
 
-        for(int i=0; i<size; i++){
+        System.out.println("The sorted valueArray is");
+            for(int i=0; i<size; i++){
 
             System.out.print(valueArray[i] + " ");
+        }
+        System.out.println();
+
+
+        System.out.println("The sorted indexArray is");
+        for(int i=0; i<size; i++){
+
+            System.out.print(indexArray[i] + " ");
         }
         System.out.println();
 
