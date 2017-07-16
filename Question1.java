@@ -7,10 +7,6 @@ import java.util.Scanner;
  */
 public class Question1 {
 
-    void insertionSort(int arr[]){
-
-
-    }
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
@@ -31,10 +27,8 @@ public class Question1 {
             indexArray[i] = scanner.nextInt();
         }
 
-
-
-
-            for(int i=1; i<size; i++){
+        //perform main logic here
+        for(int i=1; i<size; i++){
 
                 int indexKey = indexArray[i];
                 int valueKey = valueArray[i];
@@ -49,6 +43,7 @@ public class Question1 {
             }
 
 
+        //Print the 2 sorted arrays for inspection
         System.out.println("The sorted valueArray is");
             for(int i=0; i<size; i++){
 
