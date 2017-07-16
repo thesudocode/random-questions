@@ -27,7 +27,10 @@ public class Question1 {
             indexArray[i] = scanner.nextInt();
         }
 
-        //perform main logic here
+        /*
+        I have used the implementation of Insertion Sort here.
+        If you want to decrease the time your algorithm takes, then you can use the implementation of Quick Sort here.
+         */
         for(int i=1; i<size; i++){
 
                 int indexKey = indexArray[i];
