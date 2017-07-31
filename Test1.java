@@ -53,8 +53,12 @@ public class Test1 {
 
         //Print the result
         System.out.println(maxSum);
-        for(int i=finalStartIndex; i<=finalEndIndex; i++ ){
-            System.out.print(arr[i] + " ");
+
+        //for ensuring the case of {1, 37, 22} where there is no subsequence
+        if(finalEndIndex > finalStartIndex){
+            for(int i=finalStartIndex; i<=finalEndIndex; i++ ){
+                System.out.print(arr[i] + " ");
+            }
         }
     }
 }
