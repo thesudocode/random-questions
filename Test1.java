@@ -11,26 +11,47 @@ public class Test1 {
 
         int maxSum = 0, sum = 0, index = 1, startIndex = 0, endIndex = 0, finalStartIndex = 0, finalEndIndex = 0;
 
+        //loop through the array with increment/s by "value from inner-while-loop" or "1"
         while(index <= arr.length){
+
+            //initialIndex to check if the inner loop modifies the value of index or not
             int initialIndex = index - 1;
+
             sum = 0 + arr[index-1];
+
+            //startIndex for calculation of finalStartIndex
             startIndex = index-1;
+
+            //increment as long as (arr[index] - arr[index-1] == 1) and (index < arr.length)
             while(index < arr.length && arr[index] - arr[index-1] == 1){
+                //increase the value of sum
                 sum += arr[index];
                 index++;
             }
+
+            //if the value of index is the same as initialIndex i.e. inner-while-loop didn't modify the value of index
             if(initialIndex == (index - 1)){
+                //increment index by 1 in that case
                 index++;
             } else {
+
+                //endIndex for calculation of finalEndIndex
                 endIndex = index - 1;
+
+                //if the sum calculated is greater than maxSum
                 if(sum > maxSum){
+
+                    //replace maxSum with sum
                     maxSum = sum;
+
+                    //Calculate the values of finalStartIndex and finalEndIndex
                     finalStartIndex = startIndex;
                     finalEndIndex = endIndex;
                 }
             }
         }
 
+        //Print the result
         System.out.println(maxSum);
         for(int i=finalStartIndex; i<=finalEndIndex; i++ ){
             System.out.print(arr[i] + " ");
