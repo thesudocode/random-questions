@@ -31,8 +31,10 @@ public class Question2 {
         }
 
         for(int i=0; i<m; i++){
-
-                System.out.println(inputString[i]);
+            for(int j=0; j<n; j++) {
+                System.out.print(db[i][j] + " ");
+            }
+            System.out.println();
         }
 
     }
