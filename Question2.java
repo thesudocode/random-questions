@@ -24,14 +24,16 @@ public class Question2 {
         for(int i=0; i<m; i++){
             String[] splitString = inputString[i].split(",");
 
-            System.out.println("The length is: " + splitString.length);
-
+            //System.out.println("The length is: " + splitString.length);
+            for(int j=0; j<splitString.length; j++){
+                db[i][j] = Integer.parseInt(splitString[j]);
+            }
         }
 
         for(int i=0; i<m; i++){
 
                 System.out.println(inputString[i]);
-            }
+        }
 
     }
 }
