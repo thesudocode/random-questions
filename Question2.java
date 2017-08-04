@@ -30,12 +30,26 @@ public class Question2 {
             }
         }
 
+        int rowNumber = scanner.nextInt();
+        int columnNumber = scanner.nextInt();
+
+
+
+        System.out.println("The value of m is: " + m);
+        System.out.println("The value of n is: " + n);
+
+        System.out.println("The values of grid-square are: ");
         for(int i=0; i<m; i++){
             for(int j=0; j<n; j++) {
                 System.out.print(db[i][j] + " ");
             }
             System.out.println();
         }
+
+
+        System.out.println("The value of rowNumber is: " + rowNumber);
+        System.out.println("The value of columnNumber is: " + columnNumber);
+
 
     }
 }
