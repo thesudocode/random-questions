@@ -14,13 +14,15 @@ public class Question2 {
 
         int[][] db = new int[m][n];
 
+        //Taking the input line-by-line in form of Strings
+        //Storing the input lines in corresponding string indexes
         String[] inputString = new String[m];
         Scanner inputStringScanner = new Scanner(System.in);
         for(int i=0; i<m; i++){
             inputString[i] = inputStringScanner.nextLine();
         }
 
-
+        //Splitting the strings and parsing them to be stored in int form
         for(int i=0; i<m; i++){
             String[] splitString = inputString[i].split(",");
 
@@ -30,11 +32,12 @@ public class Question2 {
             }
         }
 
+        //Taking the last 2 comma separated inputs
         int rowNumber = scanner.nextInt();
         int columnNumber = scanner.nextInt();
 
 
-
+        //Printing the inputs one-by-one
         System.out.println("The value of m is: " + m);
         System.out.println("The value of n is: " + n);
 
